@@ -8,21 +8,21 @@ class School
   end
 
   def add_student(student, grade)
-    if(!@roster.keys.include?(grade))
-      @roster[grade] = []
+    if(!roster.keys.include?(grade))
+      roster[grade] = []
     end
-    @roster[grade].push(student)
+    roster[grade].push(student)
   end
 
   def grade(num)
-    @roster[num]
+    roster[num]
   end
 
   def sort
     hash = {}
-    @roster.each_with_index do |(k,v), index|
+    roster.each_with_index do |(k,v), index|
       hash[k] = v.sort
-    @roster[k] = hash[k]
+    roster[k] = hash[k]
     end
   end
 end
